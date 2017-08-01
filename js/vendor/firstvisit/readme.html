@@ -1,0 +1,16 @@
+<h1 id="First-Visit-Popup"><a href="#First-Visit-Popup" class="headerlink" title="First Visit Popup"></a>First Visit Popup</h1><h2 id="Version-1-2"><a href="#Version-1-2" class="headerlink" title="Version 1.2"></a>Version 1.2</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><strong>First Visit Popup</strong> is a <em>jQuery</em> plug-in which shows the user a message on their first visit to a web page.</p>
+<h3 id="How-to-use-it"><a href="#How-to-use-it" class="headerlink" title="How to use it"></a>How to use it</h3><ol>
+<li>Add the file (<code>jquery.firstVisitPopup.js</code>) to your project, along with <em>jQuery</em>.</li>
+<li>Add an element to the page for your popup message.</li>
+<li>Add the following <em>jQuery</em> to your page, to be executed on load:</li>
+</ol>
+<p><code>javascript
+    $(&#39;#my-welcome-message&#39;).firstVisitPopup({
+        cookieName : &#39;homepage&#39;,
+        showAgainSelector : &#39;#show-message&#39;
+    });</code></p>
+<p>…where <code>&#39;#my-welcome-message&#39;</code> is a selector for the element added in step 2, <code>cookieName</code> is a name for cookie which will determine whether or not to show the message again, and <code>showAgainSelector</code> is the selector of an element on the page the user can click to show the message again (optional).</p>
+<p>The script doesn’t add any styling information, so you’ll have to manually place the elements and hide them. See demo.html for an example.</p>
+<h3 id="Author-and-Acknowledgements"><a href="#Author-and-Acknowledgements" class="headerlink" title="Author and Acknowledgements"></a>Author and Acknowledgements</h3><ul>
+<li>Written by <a href="http://chris-cook.co.uk">Chris Cook</a></li>
+</ul>

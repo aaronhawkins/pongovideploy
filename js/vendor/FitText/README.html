@@ -1,0 +1,47 @@
+<h1 id="FitText-js-a-jQuery-plugin-for-inflating-web-type"><a href="#FitText-js-a-jQuery-plugin-for-inflating-web-type" class="headerlink" title="FitText.js, a jQuery plugin for inflating web type"></a>FitText.js, a jQuery plugin for inflating web type</h1><p>FitText makes font-sizes flexible. Use this plugin on your responsive design for ratio-based resizing of your headlines.</p>
+<h2 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h2><p>Here is a simple FitText setup:</p>
+<p>```html</p>
+<p><script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script></p>
+<p><script src="jquery.fittext.js"></script></p>
+<p><script>
+  jQuery(“#responsive_headline”).fitText();
+</script>
+```</p>
+<p>Your text should now fluidly resize, by default: Font-size = 1/10th of the element’s width.</p>
+<h2 id="The-Compressor"><a href="#The-Compressor" class="headerlink" title="The Compressor"></a>The Compressor</h2><p>If your text is resizing poorly, you’ll want to turn tweak up/down “The Compressor”. It works a little like a guitar amp. The default is <code>1</code>.</p>
+<p><code>javascript
+jQuery(&quot;#responsive_headline&quot;).fitText(1.2); // Turn the compressor up   (resizes more aggressively)
+jQuery(&quot;#responsive_headline&quot;).fitText(0.8); // Turn the compressor down (resizes less aggressively)</code></p>
+<p>This will hopefully give you a level of “control” that might not be pixel perfect, but resizes smoothly &amp; nicely.</p>
+<h2 id="minFontSize-amp-maxFontSize"><a href="#minFontSize-amp-maxFontSize" class="headerlink" title="minFontSize &amp; maxFontSize"></a>minFontSize &amp; maxFontSize</h2><p>FitText now allows you to specify two optional pixel values: <code>minFontSize</code> and <code>maxFontSize</code>. Great for situations when you want to preserve hierarchy.</p>
+<p><code>javascript
+jQuery(&quot;#responsive_headline&quot;).fitText(1.2, { minFontSize: &#39;20px&#39;, maxFontSize: &#39;40px&#39; });</code></p>
+<h2 id="CSS-FAQ"><a href="#CSS-FAQ" class="headerlink" title="CSS FAQ"></a>CSS FAQ</h2><ul>
+<li>:warning: Run FitText before anything that hides the element you’re trying to size (e.g. before Carousels, Scrollers, Accordions, Tabs, etc). Hiding an element’s container removes its width. It can’t resize without a width.</li>
+<li>:warning: <strong>Make sure your container has a width!</strong><ul>
+<li><code>display: inline</code> elements don’t have a width. Use <code>display: block</code> OR <code>display: inline-block</code>+ a specified width (i.e. <code>width: 100%</code>).</li>
+<li><code>position:absolute</code> elements need a specified width as well.</li>
+</ul>
+</li>
+<li>Tweak until you like it.</li>
+<li>Set a No-JS fallback font-size in your CSS.</li>
+<li>:new: If your text is full width, you might want to <strong>NOT</strong> use FitText and just use CSS <code>vw</code> units instead. Supported in all major browsers.</li>
+</ul>
+<h2 id="Don’t-use-jQuery"><a href="#Don’t-use-jQuery" class="headerlink" title="Don’t use jQuery?"></a>Don’t use jQuery?</h2><p>That’s okay. Check out these handy non-jQuery versions maintained by other people.</p>
+<ul>
+<li><a href="https://github.com/adactio/FitText.js">non-jQuery FitText</a> from @adactio</li>
+<li><a href="https://github.com/patrickmarabeas/AngularJS-FitText.js">Angular.js FitText.js</a> from @patrickmarabeas</li>
+<li><a href="https://github.com/ampproject/amphtml/tree/master/extensions/amp-fit-text">AMP-HTML FitText</a></li>
+<li><a href="https://github.com/peacechen/FitText-UMD">FitText UMD</a> by @peacechen</li>
+</ul>
+<h2 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h2><ul>
+<li><code>v 1.2</code> - Added <code>onorientationchange</code> event</li>
+<li><code>v 1.1</code> - FitText now ignores font-size and has minFontSize &amp; maxFontSize options</li>
+<li><code>v 1.0.1</code> - Fix for broken font-size.</li>
+<li><code>v 1.0</code> - Initial Release</li>
+</ul>
+<h2 id="In-Use"><a href="#In-Use" class="headerlink" title="In Use:"></a>In Use:</h2><ul>
+<li><a href="http://trentwalton.com">Trent Walton</a></li>
+</ul>
+<p>If you want more exact fitting text, there are plugins for that! We recommend checking out <a href="https://github.com/zachleat/BigText">BigText</a> by Zach Leatherman or <a href="https://github.com/freqDec/slabText">SlabText</a> by Brian McAllister.</p>
+<h3 id="Download-Fork-Commit"><a href="#Download-Fork-Commit" class="headerlink" title="Download, Fork, Commit."></a>Download, Fork, Commit.</h3><p>If you think you can make this better, please Download, Fork, &amp; Commit. We’d love to see your ideas.</p>
