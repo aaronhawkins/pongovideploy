@@ -611,6 +611,9 @@ ul.menu-large li a {
 .sidr_wrap {
   clear:both;
 }
+.sidr ul {
+  margin:5px 0;
+}
 #sidr_menu li {
   list-style: none;
 }
@@ -657,10 +660,9 @@ ul.menu-large li a {
   text-decoration: underline;
   color:#ff3d00;
 }
-.menu-inner .next {display: none;}
 
 .menu-inner {
-  padding:20px;
+  padding:0px 20px;
 }
 .social-inner {
   padding:20px;
@@ -996,7 +998,7 @@ ul.tag-list {
   }
 }
 
-@media (max-width: 915px) {
+@media (max-width: 930px) {
   .menu-large {
     display:none;
   }
