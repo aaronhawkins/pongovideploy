@@ -109,6 +109,9 @@ ol li {counter-increment: li}
   z-index: -2;
   min-height: 1000px;
 }
+.footer-logo img {
+  width:100px !important;
+}
 .footer-nav ul li {
   display: inline-block;
   margin-right:10px;
@@ -384,8 +387,12 @@ h3.post-title {
 }
 
 #logo {
-  float:left;
-  margin-left:10px;
+  left: -60px;
+  margin-left: 50%;
+  position: absolute;
+}
+.menu-large, #menu_button {
+  display:none;
 }
 
 .panel h1,
@@ -847,7 +854,7 @@ strong {
   box-sizing: border-box !important;
 }
 .full-width-button {
-  width:80%;
+  width:100%;
 }
 .injection_html {
   visibility: hidden;
