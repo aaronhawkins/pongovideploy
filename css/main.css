@@ -346,6 +346,7 @@ h1.page-title {
   margin-top:50px;
   font-size:55px;
   text-align: center;
+  color: #4caf50;
 }
 
 h1.page-title a {
@@ -391,7 +392,7 @@ h3.post-title {
   margin-left: 50%;
   position: absolute;
 }
-.menu-large, #menu_button {
+.menu-large {
   display:none;
 }
 
@@ -830,6 +831,7 @@ time.update {
   font-size:25px;
   margin-bottom:25px;
   font-weight: 200;
+  color: #4caf50;
 }
 .next_button .fa {
   margin-left:10px;
